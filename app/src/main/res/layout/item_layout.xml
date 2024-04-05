@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,40 +8,42 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="183dp"
-        android:layout_height="168dp"
-        android:layout_marginEnd="8dp"
-        android:scaleType="centerCrop"
+        android:layout_width="232dp"
+        android:layout_height="203dp"
+        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/CatName"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CatName"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:src="@drawable/placeholder"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/placeholder" />
 
     <TextView
         android:id="@+id/CatName"
-        android:layout_width="198dp"
-        android:layout_height="34dp"
+        android:layout_width="159dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/color_text_main"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="182dp"
-        tools:text="Abyssinian"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-8dp"
+        tools:text="Abyssinian" />
 
     <TextView
-        android:id="@+id/CatFamilyFriendly"
+        android:id="@+id/CatLength"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/CatName"
-        app:layout_constraintStart_toStartOf="@id/CatName"
-        app:layout_constraintTop_toBottomOf="@id/CatName"
-        tools:text="Family friendly: 3" />
+        android:textColor="@color/color_text_secondary"
+        app:layout_constraintEnd_toEndOf="@id/CatOrigin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/CatOrigin"
+        app:layout_constraintTop_toBottomOf="@id/CatOrigin"
+        tools:text="Length: 12 to 16 inches" />
 
     <TextView
         android:id="@+id/CatPlayfulness"
@@ -49,18 +51,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:textSize="16sp"
+        android:textColor="@color/color_text_secondary"
         app:layout_constraintEnd_toEndOf="@id/CatFamilyFriendly"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/CatFamilyFriendly"
         app:layout_constraintTop_toBottomOf="@id/CatFamilyFriendly"
         tools:text="Playfulness: 5" />
 
-    <TextView
-        android:id="@+id/CatIntelligence"
+    <TextView        android:id="@+id/CatIntelligence"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:textSize="16sp"
+        android:textColor="@color/color_text_secondary"
         app:layout_constraintEnd_toEndOf="@id/CatPlayfulness"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/CatPlayfulness"
         app:layout_constraintTop_toBottomOf="@id/CatPlayfulness"
         tools:text="Intelligence: 5" />
@@ -71,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:textSize="16sp"
+        android:textColor="@color/color_text_secondary"
         app:layout_constraintEnd_toEndOf="@id/CatIntelligence"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/CatIntelligence"
@@ -78,15 +84,16 @@
         tools:text="Origin: Southeast Asia" />
 
     <TextView
-        android:id="@+id/CatLength"
+        android:id="@+id/CatFamilyFriendly"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/CatOrigin"
+        android:textColor="@color/color_text_secondary"
+        app:layout_constraintEnd_toEndOf="@id/CatName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/CatOrigin"
-        app:layout_constraintTop_toBottomOf="@id/CatOrigin"
-        tools:text="Length: 12 to 16 inches" />
+        app:layout_constraintStart_toStartOf="@id/CatName"
+        app:layout_constraintTop_toBottomOf="@id/CatName"
+        tools:text="Family friendly: 3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

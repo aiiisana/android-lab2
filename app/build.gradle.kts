@@ -53,6 +53,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.navigation:navigation-fragment:2.7.7")
+    implementation ("com.squareup.picasso:picasso:2.71828")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

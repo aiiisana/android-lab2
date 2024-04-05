@@ -7,6 +7,8 @@ import com.example.catsapp.Cat
 import com.example.catsapp.CatDiffUtil
 import com.example.catsapp.R
 import com.example.catsapp.databinding.ItemLayoutBinding
+import com.squareup.picasso.Callback
+import com.squareup.picasso.Picasso
 
 class MyAdapter : RecyclerView.Adapter<MyAdapter.CatViewHolder>() {
 
@@ -38,9 +40,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.CatViewHolder>() {
         holder.bind(catsList[position])
     }
 
-    inner class CatViewHolder(private val binding: ItemLayoutBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
+    inner class CatViewHolder(private val binding: ItemLayoutBinding) :        RecyclerView.ViewHolder(binding.root) {
         fun bind(cat: Cat) {
             with(binding) {
                 CatName.text = cat.name
@@ -49,12 +49,12 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.CatViewHolder>() {
                 CatFamilyFriendly.text = "Family Friendly: ${cat.familyFriendly}"
                 CatPlayfulness.text = "Playfulness: ${cat.playfulness}"
                 CatIntelligence.text = "Intelligence: ${cat.intelligence}"
-
-                Glide.with(img.context)
+                Picasso.get()
                     .load(cat.imageLink)
                     .placeholder(R.drawable.placeholder)
-                    .into(img)
-            }
-        }
-    }
-}
+                    .error(R.drawable.ic_launcher_background)
+                    .into(img, object : Callback {
+                        override fun onSuccess() {}
+                        override fun onError(e: Exception?) {}                    })
+            }        }
+    }}
