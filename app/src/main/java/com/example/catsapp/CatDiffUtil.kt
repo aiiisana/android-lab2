@@ -2,7 +2,7 @@ package com.example.catsapp
 
 import androidx.recyclerview.widget.DiffUtil
 
-class OfferDiffUtil(
+class CatDiffUtil(
     private val oldList: List<Cat>,
     private val newList: List<Cat>,
 ): DiffUtil.Callback() {

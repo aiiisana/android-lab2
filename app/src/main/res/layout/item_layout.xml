@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="183dp"
+        android:layout_height="168dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CatName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/placeholder"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/CatName"
+        android:layout_width="198dp"
+        android:layout_height="34dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="182dp"
+        tools:text="Abyssinian"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/CatFamilyFriendly"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/CatName"
+        app:layout_constraintStart_toStartOf="@id/CatName"
+        app:layout_constraintTop_toBottomOf="@id/CatName"
+        tools:text="Family friendly: 3" />
+
+    <TextView
+        android:id="@+id/CatPlayfulness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/CatFamilyFriendly"
+        app:layout_constraintStart_toStartOf="@id/CatFamilyFriendly"
+        app:layout_constraintTop_toBottomOf="@id/CatFamilyFriendly"
+        tools:text="Playfulness: 5" />
+
+    <TextView
+        android:id="@+id/CatIntelligence"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/CatPlayfulness"
+        app:layout_constraintStart_toStartOf="@id/CatPlayfulness"
+        app:layout_constraintTop_toBottomOf="@id/CatPlayfulness"
+        tools:text="Intelligence: 5" />
+
+    <TextView
+        android:id="@+id/CatOrigin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/CatIntelligence"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/CatIntelligence"
+        app:layout_constraintTop_toBottomOf="@id/CatIntelligence"
+        tools:text="Origin: Southeast Asia" />
+
+    <TextView
+        android:id="@+id/CatLength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/CatOrigin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/CatOrigin"
+        app:layout_constraintTop_toBottomOf="@id/CatOrigin"
+        tools:text="Length: 12 to 16 inches" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
